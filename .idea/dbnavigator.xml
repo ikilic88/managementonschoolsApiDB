@@ -5,12 +5,18 @@
     <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
+  <component name="DBNavigator.Project.DatabaseBrowserManager">
+    <autoscroll-to-editor value="false" />
+    <autoscroll-from-editor value="true" />
+    <show-object-properties value="true" />
+    <loaded-nodes />
+  </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="130fa9d5-714b-4ae1-93f9-cec20922ebd5">
-      <console name="Mos" type="STANDARD" schema="postgres" session="Main" />
+    <connection id="b389243d-ea90-4261-a34b-dd97c9cc5347">
+      <console name="ManagementOnSchools" type="STANDARD" schema="public" session="Main"><![CDATA[select * from teacher]]></console>
     </connection>
-    <connection id="e21b6ec0-f3d6-47bc-b637-e1127b0d6176">
-      <console name="MOSDB" type="STANDARD" schema="postgres" session="Main" />
+    <connection id="511d1f96-d3d6-4295-b10a-b91afe0eda3b">
+      <console name="MOSDB" type="STANDARD" schema="school_management" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -19,15 +25,23 @@
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />
   </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces>
+      <mapping database-type="POSTGRES" interface-id="DEFAULT" />
+    </recently-used-interfaces>
+  </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="130fa9d5-714b-4ae1-93f9-cec20922ebd5" active="true" signed="true">
+      <connection id="b389243d-ea90-4261-a34b-dd97c9cc5347" active="true" signed="true">
         <database>
-          <name value="Mos" />
+          <name value="ManagementOnSchools" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
@@ -36,12 +50,12 @@
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="localhost" />
+          <host value="209.38.244.227" />
           <port value="5432" />
-          <database value="postgres" />
+          <database value="school_management" />
           <type value="USER_PASSWORD" />
-          <user value="" />
-          <deprecated-pwd value="" />
+          <user value="select_user" />
+          <deprecated-pwd value="NDN3NWlqZnNv" />
         </database>
         <properties>
           <auto-commit value="false" />
@@ -109,7 +123,7 @@
           <object-name-filters />
         </object-filters>
       </connection>
-      <connection id="e21b6ec0-f3d6-47bc-b637-e1127b0d6176" active="true" signed="true">
+      <connection id="511d1f96-d3d6-4295-b10a-b91afe0eda3b" active="true" signed="true">
         <database>
           <name value="MOSDB" />
           <description value="" />
@@ -122,9 +136,9 @@
           <url-type value="DATABASE" />
           <host value="209.38.244.227" />
           <port value="5432" />
-          <database value="postgres" />
+          <database value="school_management" />
           <type value="USER_PASSWORD" />
-          <user value="school_management" />
+          <user value="select_user" />
           <deprecated-pwd value="NDN3NWlqZnNv" />
         </database>
         <properties>
@@ -231,13 +245,13 @@
       </filters>
       <sorting>
         <object-type name="COLUMN" sorting-type="NAME" />
-        <object-type name="FUNCTİON" sorting-type="NAME" />
+        <object-type name="FUNCTION" sorting-type="NAME" />
         <object-type name="PROCEDURE" sorting-type="NAME" />
         <object-type name="ARGUMENT" sorting-type="POSITION" />
-        <object-type name="TYPE ATTRİBUTE" sorting-type="POSITION" />
+        <object-type name="TYPE ATTRIBUTE" sorting-type="POSITION" />
       </sorting>
       <default-editors>
-        <object-type name="VİEW" editor-type="SELECTION" />
+        <object-type name="VIEW" editor-type="SELECTION" />
         <object-type name="PACKAGE" editor-type="SELECTION" />
         <object-type name="TYPE" editor-type="SELECTION" />
       </default-editors>
@@ -248,24 +262,24 @@
           <object-type name="SCHEMA" enabled="true" />
           <object-type name="USER" enabled="false" />
           <object-type name="ROLE" enabled="false" />
-          <object-type name="PRİVİLEGE" enabled="false" />
+          <object-type name="PRIVILEGE" enabled="false" />
           <object-type name="CHARSET" enabled="false" />
           <object-type name="TABLE" enabled="true" />
-          <object-type name="VİEW" enabled="true" />
-          <object-type name="MATERİALİZED VİEW" enabled="true" />
-          <object-type name="İNDEX" enabled="true" />
-          <object-type name="CONSTRAİNT" enabled="true" />
-          <object-type name="DATASET TRİGGER" enabled="true" />
-          <object-type name="DATABASE TRİGGER" enabled="true" />
+          <object-type name="VIEW" enabled="true" />
+          <object-type name="MATERIALIZED VIEW" enabled="true" />
+          <object-type name="INDEX" enabled="true" />
+          <object-type name="CONSTRAINT" enabled="true" />
+          <object-type name="DATASET TRIGGER" enabled="true" />
+          <object-type name="DATABASE TRIGGER" enabled="true" />
           <object-type name="SYNONYM" enabled="false" />
           <object-type name="SEQUENCE" enabled="true" />
           <object-type name="PROCEDURE" enabled="true" />
-          <object-type name="FUNCTİON" enabled="true" />
+          <object-type name="FUNCTION" enabled="true" />
           <object-type name="PACKAGE" enabled="true" />
           <object-type name="TYPE" enabled="true" />
-          <object-type name="DİMENSİON" enabled="false" />
+          <object-type name="DIMENSION" enabled="false" />
           <object-type name="CLUSTER" enabled="false" />
-          <object-type name="DBLİNK" enabled="true" />
+          <object-type name="DBLINK" enabled="true" />
         </lookup-objects>
         <force-database-load value="false" />
         <prompt-connection-selection value="true" />
@@ -325,7 +339,6 @@
           <content-type name="JSON" enabled="true" />
           <content-type name="JSON5" enabled="true" />
           <content-type name="Groovy" enabled="true" />
-          <content-type name="AIDL" enabled="true" />
           <content-type name="YAML" enabled="true" />
           <content-type name="Manifest" enabled="true" />
         </content-types>
@@ -591,5 +604,8 @@
         </visibility-settings>
       </environment>
     </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
   </component>
 </project>

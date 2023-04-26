@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         tags = "@DBTest",
-        glue = {"stepdefinitions","hooks"},
+        glue = {"stepdefinitions", "hooks"},
         features = "./src/test/resources/features"
 
 

@@ -9,12 +9,14 @@ import static org.junit.Assert.assertTrue;
 
 public class DBReadTeacherStepDefs {
     ResultSet resultSet;
+    Connection connection;
+    Statement statement;
 
     @Given("Find teacher by ID")
     public void find_teacher_by_id() throws SQLException {
         //SELECT * FROM teacher WHERE id = 35;
-        Connection connection = DriverManager.getConnection("jdbc:postgresql://209.38.244.227:5432/school_management", "select_user", "43w5ijfso");
-        Statement statement = connection.createStatement();
+        connection = DriverManager.getConnection("jdbc:postgresql://209.38.244.227:5432/school_management", "select_user", "43w5ijfso");
+        statement = connection.createStatement();
         resultSet = statement.executeQuery("SELECT * FROM teacher WHERE id = 35");
 
         resultSet.next();
@@ -36,7 +38,9 @@ public class DBReadTeacherStepDefs {
         assertTrue(resultSet.getBoolean("is_advisor"));
         assertEquals(4, resultSet.getInt("user_role_id"));
 
-
+        connection.close();
+        statement.close();
+        resultSet.close();
 
     }
 }
