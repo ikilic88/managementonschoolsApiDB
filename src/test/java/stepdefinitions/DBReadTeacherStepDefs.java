@@ -35,7 +35,7 @@ public class DBReadTeacherStepDefs {
         assertEquals("ali.can@gmail.com", resultSet.getString("email"));
         assertTrue(resultSet.getBoolean("is_advisor"));
         assertEquals(4, resultSet.getInt("user_role_id"));
-        connection.close();
+
 
 
     }
